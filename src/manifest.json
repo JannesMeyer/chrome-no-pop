@@ -1,0 +1,20 @@
+{
+	"name": "NoPop",
+	"version": "3.0",
+	"description": "Completely disables popups, except on encrypted sites.",
+
+	"icons": {
+		"48": "images/icon48.png"
+	},
+
+	"permissions": [
+		"notifications",
+		"tabs"
+	],
+	"background_page": "background.html",
+	"content_scripts": [ {
+		"matches": ["http://*/*"],
+		"all_frames": true,
+		"js": ["nopop-isolated.js"]
+	} ]
+}
