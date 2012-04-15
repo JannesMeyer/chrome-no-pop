@@ -4,6 +4,8 @@ NoPop is a Google Chrome browser extension that blocks all popups (except on enc
 
 The extension shows you a notification every time a popup has been blocked and it even allows you to disable the popup blocker for five minutes.
 
+Unfortunately this extension requires some broad permissions, but I can not change that as long Google Chrome doesn't have a real API for popup blocking. At the moment, I have to overwrite the popup-opening function on every single page that you look at. This extensions does nothing on sites that are using an encrypted HTTPS connection, so you don't have to trust me there. Additionally, I think it's less likely that encrypted sites would misuse popups.
+
 ## Installation
 
 Get the extension from the [Downloads section](https://github.com/JannesMeyer/NoPop/downloads) or just use this link:
