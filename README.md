@@ -20,4 +20,4 @@ GPLv3
 
 ## Author
 
-jannes.meyer@gmail.com
+jannes.meyer (at) gmail (dot) com
