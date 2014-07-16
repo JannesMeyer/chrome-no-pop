@@ -1,20 +1,26 @@
 {
+	"manifest_version": 2,
 	"name": "NoPop",
-	"version": "3.0",
-	"description": "Completely disables popups, except on encrypted sites.",
-
+	"version": "4.0.0",
+	"description": "Completely disables popups, except on encrypted sites",
 	"icons": {
 		"48": "images/icon48.png"
 	},
-
 	"permissions": [
-		"notifications",
-		"tabs"
+		"notifications"
 	],
-	"background_page": "background.html",
-	"content_scripts": [ {
-		"matches": ["http://*/*"],
-		"all_frames": true,
-		"js": ["nopop-isolated.js"]
-	} ]
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"all_frames": true,
+			"js": ["nopop-contentscript.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"nopop-inline.js"
+	]
 }
